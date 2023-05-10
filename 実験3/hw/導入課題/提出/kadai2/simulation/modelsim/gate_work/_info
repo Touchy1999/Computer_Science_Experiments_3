@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/17.1/kadai2/simulation/modelsim
+vhard_block
+Z1 !s110 1618228413
+!i10b 1
+!s100 ;zKongb]TISdZTnzTbzNT1
+IFVfN2Enc0;z`EBa:cCPfV1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1618228021
+Z4 8kadai2_7_1200mv_100c_slow.vo
+Z5 Fkadai2_7_1200mv_100c_slow.vo
+L0 1939
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1618228413.000000
+Z8 !s107 kadai2_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|kadai2_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vkadai2
+R1
+!i10b 1
+!s100 WH;I4kFnbH2Xz]<i1jDG53
+IT]D26HI70=^^N;=FU=B]b2
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vkadai2_vlg_tst
+!s110 1618228418
+!i10b 1
+!s100 TUPmLHNTIzo?@Ci3g?DUL0
+I122@:W^VHGca6GmW:BDmF1
+R2
+R0
+w1618228392
+8C:/intelFPGA_lite/17.1/kadai2/kadai2_test1.vt
+FC:/intelFPGA_lite/17.1/kadai2/kadai2_test1.vt
+L0 29
+R6
+r1
+!s85 0
+31
+!s108 1618228418.000000
+!s107 C:/intelFPGA_lite/17.1/kadai2/kadai2_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/kadai2|C:/intelFPGA_lite/17.1/kadai2/kadai2_test1.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/kadai2
+R12

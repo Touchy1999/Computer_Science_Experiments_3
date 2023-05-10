@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "stop",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

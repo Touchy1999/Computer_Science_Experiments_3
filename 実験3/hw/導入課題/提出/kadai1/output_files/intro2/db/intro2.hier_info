@@ -1,0 +1,47 @@
+|intro2
+reset => ~NO_FANOUT~
+clock => counter.CLK
+clock => se2.CLK
+clock => disp.CLK
+clock => a0.CLK
+sela2[0] << intro1:intro1_ins0.sela
+sela2[1] << intro1:intro1_ins0.sela
+sela2[2] << intro1:intro1_ins0.sela
+sela2[3] << intro1:intro1_ins0.sela
+out2[0] << intro1:intro1_ins0.led
+out2[1] << intro1:intro1_ins0.led
+out2[2] << intro1:intro1_ins0.led
+out2[3] << intro1:intro1_ins0.led
+out2[4] << intro1:intro1_ins0.led
+out2[5] << intro1:intro1_ins0.led
+out2[6] << intro1:intro1_ins0.led
+out2[7] << intro1:intro1_ins0.led
+
+
+|intro2|intro1:intro1_ins0
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+se[0] <= <GND>
+se[1] <= <GND>
+se[2] <= <GND>
+se[3] <= <GND>
+se[4] <= <GND>
+se[5] <= <GND>
+se[6] <= <GND>
+se[7] <= <GND>
+sela[0] <= <GND>
+sela[1] <= <GND>
+sela[2] <= <GND>
+sela[3] <= <GND>
+led[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= <GND>
+
+

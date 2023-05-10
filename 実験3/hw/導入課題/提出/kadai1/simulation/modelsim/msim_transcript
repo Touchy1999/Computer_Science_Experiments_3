@@ -1,0 +1,57 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do kadai1_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {kadai1_7_1200mv_100c_slow.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:06:47 on Apr 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." kadai1_7_1200mv_100c_slow.vo 
+# -- Compiling module kadai1
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	kadai1
+# End time: 16:06:47 on Apr 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/simulation/modelsim {C:/intelFPGA_lite/17.1/simulation/modelsim/kadai1_test1.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:06:48 on Apr 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.1/simulation/modelsim" C:/intelFPGA_lite/17.1/simulation/modelsim/kadai1_test1.vt 
+# -- Compiling module kadai1_vlg_tst
+# 
+# Top level modules:
+# 	kadai1_vlg_tst
+# End time: 16:06:48 on Apr 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./kadai1_run_msim_gate_verilog.do PAUSED at line 12
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/simulation/modelsim C:/intelFPGA_lite/17.1/simulation/modelsim/kadai1_test1.vt
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:06:53 on Apr 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.1/simulation/modelsim" C:/intelFPGA_lite/17.1/simulation/modelsim/kadai1_test1.vt 
+# -- Compiling module kadai1_vlg_tst
+# 
+# Top level modules:
+# 	kadai1_vlg_tst
+# End time: 16:06:53 on Apr 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.kadai1_vlg_tst
+add wave -position end  sim:/kadai1_vlg_tst/data
+add wave -position end  sim:/kadai1_vlg_tst/LED
+run
+run
+run
+run

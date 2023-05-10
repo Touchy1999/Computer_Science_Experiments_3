@@ -1,0 +1,26 @@
+module sample(SW, LED);
+  input  [3:0] SW;
+  output [3:0] LED;
+  wire         co;
+
+  counter10 i0(SW[0], LED, co);
+endmodule
+
+module counter10(ck, q, co);
+  input ck;
+  output [3:0] q;  // counter output
+  output       co; // carry out
+  reg    [3:0] q;
+  reg          co;
+
+  always @(posedge ck) begin
+    if (q == 9) begin
+      q <= 0;
+      co <= 1;
+    end
+    else begin
+      q <= q + 1;
+      co <= 0;
+    end
+  end
+endmodule

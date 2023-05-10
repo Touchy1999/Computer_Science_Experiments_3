@@ -1,0 +1,14 @@
+module intro2 (
+	input reset, clock,
+	output reg [3:0] sela2,
+	output reg [7:0] out2 );
+	
+	reg a0, a1, a2, a3;
+	
+	always @(posedge clock) 
+	begin
+		a0 = a0 + 4'b0001;
+		if(a0 == 4'b1010)
+		begin
+			a0 = 4'b0000;
+			a1 = a1 + 4'b0001

@@ -1,0 +1,3 @@
+cd /mnt/c/Users/橘大佑/isle3sw-2021-ocaml-tachibanadaisuke
+
+dune runtest

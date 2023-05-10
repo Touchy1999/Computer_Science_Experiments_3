@@ -1,0 +1,10 @@
+module kadai1 (
+  input [3,0] data,
+  output reg [7,0] LED );
+  
+  wire [3,0] data;
+  wire [7,0] LED;
+  
+  
+  assign 
+endmodule

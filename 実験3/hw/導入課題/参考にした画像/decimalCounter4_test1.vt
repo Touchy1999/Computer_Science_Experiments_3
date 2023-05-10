@@ -1,0 +1,29 @@
+`timescale 1ns / 1ps
+module decimalCounter4_vlg_tst();
+  reg numClock, displayClock;
+  wire [3:0] controlOut;
+  wire [7:0] segOut;
+
+  decimalCounter4 i1(
+  .numClock(numClock),
+	.displayClock(displayClock),
+	.controlOut(controlOut),
+	.segOut(segOut)
+  );
+
+  initial begin
+    numClock <= 1;
+    displayClock <= 1;
+  end
+
+  always begin
+    #200
+    numClock <= ~numClock;
+  end
+
+  always begin
+    #25
+    displayClock  <= ~displayClock;
+  end
+
+endmodule // decimalCounter4_vlg_tst

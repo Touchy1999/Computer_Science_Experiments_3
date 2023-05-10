@@ -1,0 +1,57 @@
+		if(irin[15:14] == 2'b11) begin
+         if(irin[7:4] == 4'b0000) begin
+				dr <= arin + brin;
+			end else if(irin[7:4] == 4'b0001) begin
+				dr <= arin - brin;
+			end else if(irin[7:4] == 4'b0010) begin
+				dr <= arin && brin;
+			end else if(irin[7:4] == 4'b0011) begin
+				dr <= arin || brin;
+			end else if(irin[7:4] == 4'b0100) begin
+				dr <= arin * brin;
+			end else if(irin[7:4] == 4'b0101) begin
+				dr <= arin - brin;
+			end else if(irin[7:4] == 4'b0110) begin
+				dr <= brin;
+			end else if(irin[7:4] == 4'b0111) begin
+				dr <= 16'b0000_0000_0000_0000;
+			end else if(irin[7:4] == 4'b1000) begin
+				dr <= (brin << irin[3:0]);
+			end else if(irin[7:4] == 4'b1001) begin
+				dr <= arin + brin;
+			end else if(irin[7:4] == 4'b1010) begin
+				dr <= (brin >> irin[3:0]);
+			end else if(irin[7:4] == 4'b1011) begin
+				dr <= arin + brin;
+			end else if(irin[7:4] == 4'b1100) begin
+				dr <= arin + brin;
+			end else if(irin[7:4] == 4'b1101) begin
+				dr <= arin + brin;
+			end else if(irin[7:4] == 4'b1110) begin
+				dr <= 16'b0000_0000_0000_0000;
+			end else if(irin[7:4] == 4'b1111) begin
+				dr <= arin + brin;
+			end
+		end else if (irin[15:14] == 2'b00 || irin[15:14] == 2'b01) begin
+			dr <= arin + brin;
+		end else if (irin[15:14] == 2'b10) begin 
+			if (irin[13:11] == 3'b000) begin
+				dr <= arin;
+			end else if (irin[13:11] == 3'b100) begin
+				dr <= arin + brin;
+			end else if (irin[13:11] == 3'b111 && Z) begin
+				if (irin[10:8] == 3'b000) begin
+					dr <= arin + brin;
+				end else if (irin[10:8] == 3'b001 && (S ^ V)) begin
+					dr <= arin + brin;
+				end else if (irin[10:8] == 3'b010 && (Z || (S ^ V))) begin
+					dr <= arin + brin;
+				end else if (irin[10:8] == 3'b011 && (! Z)) begin
+					dr <= arin + brin;
+				end else begin
+					dr <= 16'b0000_0000_0000_0000;
+				end
+			end else begin
+				dr <= 16'b0000_0000_0000_0000;
+			end
+		end 

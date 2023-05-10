@@ -1,0 +1,162 @@
+1
+
+レポート(PDF)や設計したデータを含むフォルダをレポジトリにコピーする。
+
+2
+
+cd レポジトリ
+
+git add .
+
+git commit -m"コメント"
+
+git tag -a "submit" -m "コメント"
+
+git tag
+
+git push --tag
+
+そのあとはPDFファイルに従って、release をつくる。
+
+module pc (
+	input clock, reset, 
+	input [15:0] pcnext, 
+	output reg [15:0] pcvalue);
+	
+	always @ (posedge clock) begin
+		pcvalue <= pcnext;
+	end
+	
+endmodule
+
+module register (
+	input clock, reset, regwrite, 
+	input [15:0] regdata, //p5からの入力
+   input	[5:0] regin,//IRの一部分のみ入力とする
+	input [2:0] regaddr,//制御部からの入力
+	output reg [15:0] out1,
+	output reg [15:0] out2);
+	
+	reg [15:0] register_file [7:0];
+		
+	always @ (posedge clock) begin
+	   /*
+		if(irin[15:14] == 2'b11) begin//ENZAN
+			out1 <= register_file[irin[13:11]];
+			out2 <= register_file[irin[10:8]];
+			register_file[regaddr] <= regdata;
+			//regwrite <= 1;
+		end else if (irin[15:14] == 2'b00 || irin[15:14] == 2'b01) begin//LOAD Or STORE
+			out1 <= register_file[irin[13:11]];
+			out2 <= 16'b0000_0000_0000_0000;
+			register_file[irin[13:11]] <= regdata;
+			regwrite <= 1;
+		end else if (irin[15:14] == 2'b10) begin//JUMP
+			out1 <= 16'b0000_0000_0000_0000;
+			out2 <= 16'b0000_0000_0000_0000;
+			//regwrite <= 0;
+		end
+		*/
+		if (regwrite == 1) begin
+			out1 <= register_file[regin[5:3]];
+			out2 <= register_file[regin[2:0]];
+			register_file[regaddr] <= regdata;
+		end else begin
+			out1 <= 16'b0000_0000_0000_0000;
+			out2 <= 16'b0000_0000_0000_0000;
+			register_file[regaddr] <= register_file[regaddr];
+		end
+	end
+
+endmodule
+//クロックの立ち上がりでフェースが1から5のサイクルで入れ替わる
+module phasecounter(
+	input clock, 
+	input [15:0] pcout,
+	output reg [15:0] pcplus
+	);
+	
+	reg [2:0] phase;
+	
+	always @ (posedge clock) begin
+		if (phase == 3'b001) begin
+			pcplus <= pcout + 1;
+		end else begin
+			pcplus <= pcplus;
+		end
+	
+		if (phase == 3'b101) begin
+			phase <= 3'b001;
+		end else begin
+		   phase <= phase + 1;
+		end
+	end
+endmodule
+
+module p1 (
+	input clock,
+	output irout, pcout);
+	
+	reg [15:0] pc;
+	reg [15:0] ir;
+	
+	always @ (posedge clock) begin
+		
+	end
+	
+endmodule
+
+module p2 (
+	input clockin, resetin, regwritein,
+	input [15:0] regaddrin,
+	input [15:0] pcin,
+	input [13:0] irin,
+	output reg [15:0] arout,
+	output reg [15:0] brout);
+	
+	register rg (.clock(clockin) ,.reset(resetin), .regwrite(regwritein) ,.regdata(pcin), .regin(irin), .regaddr(regaddrin));
+	
+	always @ (negedge clockin) begin
+	end
+	
+	
+endmodule
+
+module p3 (
+	input clock, reset,
+	input [15:0] irin,
+	input [15:0] arin, brin,
+	output reg [15:0] dr,
+	output reg S, Z, C, V);
+	
+	always @ (posedge clock) begin
+   
+	end
+endmodule
+
+module p4 (
+	input clock, reset, 
+	input [15:0] drin, 
+	output reg [15:0] drout, 
+	output reg [15:0] mdrout);
+	
+	always @ (posedge clock) begin
+		drout <= drin;
+	end
+	
+endmodule
+
+module p5 (
+	input clock, reset,
+	input [15:0] drin,
+	output reg [15:0] drout,
+	output reg [15:0] mdrout);
+	
+	always @ (posedge clock) begin
+		
+	end
+endmodule
+
+
+
+

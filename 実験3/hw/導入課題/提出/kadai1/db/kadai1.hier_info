@@ -1,0 +1,19 @@
+|kadai1
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+LED[0] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] << <GND>
+temp[0] << <VCC>
+temp[1] << <VCC>
+temp[2] << <VCC>
+temp[3] << <GND>
+
+

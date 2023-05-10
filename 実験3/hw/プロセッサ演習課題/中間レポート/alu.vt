@@ -1,0 +1,107 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/30/2021 22:51:36"
+                                                                                
+// Verilog Test Bench template for design : processor
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module processor_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [15:0] arin;
+reg [15:0] brin;
+reg [3:0] flagin;
+reg [3:0] opin;
+// wires                                               
+wire [15:0]  dr;
+wire [3:0]  flagalu;
+wire write;
+
+// assign statements (if any)                          
+processor i1 (
+// port map - connection between master ports and signals/registers   
+	.arin(arin),
+	.brin(brin),
+	.dr(dr),
+	.flagalu(flagalu),
+	.flagin(flagin),
+	.opin(opin),
+	.write(write)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+
+arin <= 16'b1100_0101_1001_0100;
+brin <= 16'b0000_0000_0000_0101;
+opin <= 4'b0000;
+flagin <= 4'b1110;                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+
+#50
+opin <= 4'b0001;
+#50
+opin <= 4'b0010;
+#50
+opin <= 4'b0011;
+#50
+opin <= 4'b0100;
+#50
+opin <= 4'b0101;
+#50
+opin <= 4'b0110;
+#50
+opin <= 4'b0111;
+#50
+opin <= 4'b1000;
+#50
+opin <= 4'b1001;
+#50
+opin <= 4'b1010;
+#50
+opin <= 4'b1011;
+#50
+opin <= 4'b1100;
+#50
+opin <= 4'b1101;
+#50
+opin <= 4'b1110;
+#50
+opin <= 4'b1111;
+                                           
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

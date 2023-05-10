@@ -1,0 +1,133 @@
+|kadai2
+stop => dataA.OUTPUTSELECT
+stop => dataA.OUTPUTSELECT
+stop => dataA.OUTPUTSELECT
+stop => dataA.OUTPUTSELECT
+stop => dataB.OUTPUTSELECT
+stop => dataB.OUTPUTSELECT
+stop => dataB.OUTPUTSELECT
+stop => dataB.OUTPUTSELECT
+stop => dataC.OUTPUTSELECT
+stop => dataC.OUTPUTSELECT
+stop => dataC.OUTPUTSELECT
+stop => dataC.OUTPUTSELECT
+stop => dataD.OUTPUTSELECT
+stop => dataD.OUTPUTSELECT
+stop => dataD.OUTPUTSELECT
+stop => dataD.OUTPUTSELECT
+clock => dataD[0].CLK
+clock => dataD[1].CLK
+clock => dataD[2].CLK
+clock => dataD[3].CLK
+clock => dataC[0].CLK
+clock => dataC[1].CLK
+clock => dataC[2].CLK
+clock => dataC[3].CLK
+clock => dataB[0].CLK
+clock => dataB[1].CLK
+clock => dataB[2].CLK
+clock => dataB[3].CLK
+clock => dataA[0].CLK
+clock => dataA[1].CLK
+clock => dataA[2].CLK
+clock => dataA[3].CLK
+clock => loc~reg0.CLK
+LEDA[0] << kadai1:led0.LED
+LEDA[1] << kadai1:led0.LED
+LEDA[2] << kadai1:led0.LED
+LEDA[3] << kadai1:led0.LED
+LEDA[4] << kadai1:led0.LED
+LEDA[5] << kadai1:led0.LED
+LEDA[6] << kadai1:led0.LED
+LEDA[7] << kadai1:led0.LED
+LEDB[0] << kadai1:led1.LED
+LEDB[1] << kadai1:led1.LED
+LEDB[2] << kadai1:led1.LED
+LEDB[3] << kadai1:led1.LED
+LEDB[4] << kadai1:led1.LED
+LEDB[5] << kadai1:led1.LED
+LEDB[6] << kadai1:led1.LED
+LEDB[7] << kadai1:led1.LED
+LEDC[0] << kadai1:led2.LED
+LEDC[1] << kadai1:led2.LED
+LEDC[2] << kadai1:led2.LED
+LEDC[3] << kadai1:led2.LED
+LEDC[4] << kadai1:led2.LED
+LEDC[5] << kadai1:led2.LED
+LEDC[6] << kadai1:led2.LED
+LEDC[7] << kadai1:led2.LED
+LEDD[0] << kadai1:led3.LED
+LEDD[1] << kadai1:led3.LED
+LEDD[2] << kadai1:led3.LED
+LEDD[3] << kadai1:led3.LED
+LEDD[4] << kadai1:led3.LED
+LEDD[5] << kadai1:led3.LED
+LEDD[6] << kadai1:led3.LED
+LEDD[7] << kadai1:led3.LED
+loc << loc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kadai2|kadai1:led0
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+LED[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+loc <= <GND>
+
+
+|kadai2|kadai1:led1
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+LED[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+loc <= <GND>
+
+
+|kadai2|kadai1:led2
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+LED[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+loc <= <GND>
+
+
+|kadai2|kadai1:led3
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+LED[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+loc <= <GND>
+
+

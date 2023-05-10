@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/17.1/output_files/intro2/simulation/modelsim
+vhard_block
+Z1 !s110 1618054232
+!i10b 1
+!s100 ]A`J4U8FST1ibCVMbS@ln1
+I;MZhG>OdKZd=>3YU1zNzd3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1618054169
+Z4 8intro2_7_1200mv_100c_slow.vo
+Z5 Fintro2_7_1200mv_100c_slow.vo
+L0 334
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1618054232.000000
+Z8 !s107 intro2_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|intro2_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vintro2
+R1
+!i10b 1
+!s100 H3n`eZ32i6?Q[bgH0A;jP2
+IzVKV^:KzggOTn3Mm;aO141
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vintro2_vlg_tst
+!s110 1618054238
+!i10b 1
+!s100 aBl:zOXOd2@A:mo5NZULX3
+IX]UaYz?5dUR8Tg21n0NKb2
+R2
+R0
+w1618054111
+8C:/intelFPGA_lite/17.1/output_files/intro2/intro2_test1.vt
+FC:/intelFPGA_lite/17.1/output_files/intro2/intro2_test1.vt
+L0 28
+R6
+r1
+!s85 0
+31
+!s108 1618054238.000000
+!s107 C:/intelFPGA_lite/17.1/output_files/intro2/intro2_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/output_files/intro2|C:/intelFPGA_lite/17.1/output_files/intro2/intro2_test1.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/output_files/intro2
+R12

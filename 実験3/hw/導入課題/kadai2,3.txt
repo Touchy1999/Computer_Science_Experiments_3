@@ -1,0 +1,51 @@
+module countup4 (
+    input stop, clock,
+    output reg [7:0] LEDA,
+	 output reg [7:0] LEDB,
+	 output reg [7:0] LEDC,
+	 output reg [7:0] LEDD ) ;
+	 
+	 reg [3:0] dataA;
+	 reg [3:0] dataB;
+	 reg [3:0] dataC;
+	 reg [3:0] dataD;
+	 
+	 seg7led led0 (.data(dataA), .led(LEDA));
+	 seg7led led1 (.data(dataB), .led(LEDB));
+	 seg7led led2 (.data(dataC), .led(LEDC));
+	 seg7led led3 (.data(dataD), .led(LEDD));
+	 
+always @( posedge clock ) begin
+
+    if ( stop == 1 ) begin
+        dataA <= dataA ;
+		  dataB <= dataB ;
+		  dataC <= dataC ;
+		  dataD <= dataD ;
+    end else if (dataA == 4'b1001) begin
+	     if (dataB == 4'b1001) begin
+		      if (dataC == 4'b1001) begin
+				    if (dataD == 4'b1001) begin
+					     dataA <= 4'b0000;
+						  dataB <= 4'b0000;
+						  dataC <= 4'b0000;
+						  dataD <= 4'b0000;
+					 end else begin
+					     dataC <= 4'b0000;
+					     dataD <= dataD + 1;
+					 end
+				end else begin
+				    dataB <= 4'b0000;
+				    dataC <= dataC + 1;
+				end
+		  end else begin
+		      dataA <= 4'b0000;
+	         dataB <= dataB + 1;
+		  end
+	 end else begin
+	     dataA <= dataA + 1;
+    end
+	 
+end
+
+endmodule
